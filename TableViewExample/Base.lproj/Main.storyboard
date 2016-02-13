@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,13 +16,77 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="cYi-le-tzX">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell" id="cYi-le-tzX" customClass="CustomTableViewCell" customModule="TableViewExample" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cYi-le-tzX" id="Bjd-hQ-6rz">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edg-m0-zsu">
+                                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                            <color key="backgroundColor" red="0.75686274509803919" green="0.75686274509803919" blue="0.75686274509803919" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="73" id="HiB-H8-QdP"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="HiB-H8-QdP"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="widthClass=compact">
+                                                <mask key="constraints">
+                                                    <include reference="HiB-H8-QdP"/>
+                                                </mask>
+                                            </variation>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAV-TR-AjC">
+                                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                            <color key="backgroundColor" red="0.69213382174263116" green="0.6518371005959952" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="nAV-TR-AjC" firstAttribute="trailing" secondItem="Bjd-hQ-6rz" secondAttribute="trailingMargin" id="Q6Y-AX-nm5"/>
+                                        <constraint firstItem="edg-m0-zsu" firstAttribute="centerY" secondItem="Bjd-hQ-6rz" secondAttribute="centerY" id="dna-SV-MJu"/>
+                                        <constraint firstItem="edg-m0-zsu" firstAttribute="leading" secondItem="Bjd-hQ-6rz" secondAttribute="leadingMargin" id="pcA-89-umZ"/>
+                                        <constraint firstItem="nAV-TR-AjC" firstAttribute="centerY" secondItem="Bjd-hQ-6rz" secondAttribute="centerY" id="veM-Ee-nmi"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="edg-m0-zsu"/>
+                                            <exclude reference="nAV-TR-AjC"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <exclude reference="dna-SV-MJu"/>
+                                            <exclude reference="pcA-89-umZ"/>
+                                            <exclude reference="Q6Y-AX-nm5"/>
+                                            <exclude reference="veM-Ee-nmi"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="widthClass=compact">
+                                        <mask key="subviews">
+                                            <include reference="edg-m0-zsu"/>
+                                            <include reference="nAV-TR-AjC"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <include reference="dna-SV-MJu"/>
+                                            <include reference="pcA-89-umZ"/>
+                                            <include reference="Q6Y-AX-nm5"/>
+                                            <include reference="veM-Ee-nmi"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="categoryName" destination="nAV-TR-AjC" id="pWr-CE-QWi"/>
+                                    <outlet property="titleLabelWidth" destination="HiB-H8-QdP" id="to1-W7-Nmr"/>
+                                    <outlet property="titleLable" destination="edg-m0-zsu" id="48R-LY-BWP"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
@@ -30,6 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="261" y="339"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="4m4-tU-YqX">
