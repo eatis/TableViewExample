@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AAAF1F0C1C6F22C500260A53 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAF1F0B1C6F22C500260A53 /* CustomViewController.swift */; };
+		AAAF1F111C6F236900260A53 /* CTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAF1F0F1C6F236900260A53 /* CTVCell.swift */; };
+		AAAF1F121C6F236900260A53 /* CTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAAF1F101C6F236900260A53 /* CTVCell.xib */; };
+		AAAF1F141C6F25B200260A53 /* SwitchCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAF1F131C6F25B200260A53 /* SwitchCellModel.swift */; };
 		AAD7DDEB1C6DDD8E00D15B72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD7DDEA1C6DDD8E00D15B72 /* AppDelegate.swift */; };
 		AAD7DDED1C6DDD8E00D15B72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD7DDEC1C6DDD8E00D15B72 /* ViewController.swift */; };
 		AAD7DDF01C6DDD8E00D15B72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAD7DDEE1C6DDD8E00D15B72 /* Main.storyboard */; };
@@ -36,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AAAF1F0B1C6F22C500260A53 /* CustomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
+		AAAF1F0F1C6F236900260A53 /* CTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTVCell.swift; sourceTree = "<group>"; };
+		AAAF1F101C6F236900260A53 /* CTVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTVCell.xib; sourceTree = "<group>"; };
+		AAAF1F131C6F25B200260A53 /* SwitchCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchCellModel.swift; sourceTree = "<group>"; };
 		AAD7DDE71C6DDD8E00D15B72 /* TableViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD7DDEA1C6DDD8E00D15B72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAD7DDEC1C6DDD8E00D15B72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +117,10 @@
 				AAD7DDF11C6DDD8E00D15B72 /* Assets.xcassets */,
 				AAD7DDF31C6DDD8E00D15B72 /* LaunchScreen.storyboard */,
 				AAD7DDF61C6DDD8E00D15B72 /* Info.plist */,
+				AAAF1F0B1C6F22C500260A53 /* CustomViewController.swift */,
+				AAAF1F0F1C6F236900260A53 /* CTVCell.swift */,
+				AAAF1F131C6F25B200260A53 /* SwitchCellModel.swift */,
+				AAAF1F101C6F236900260A53 /* CTVCell.xib */,
 			);
 			path = TableViewExample;
 			sourceTree = "<group>";
@@ -236,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAD7DDF51C6DDD8E00D15B72 /* LaunchScreen.storyboard in Resources */,
+				AAAF1F121C6F236900260A53 /* CTVCell.xib in Resources */,
 				AAD7DDF21C6DDD8E00D15B72 /* Assets.xcassets in Resources */,
 				AAD7DDF01C6DDD8E00D15B72 /* Main.storyboard in Resources */,
 			);
@@ -262,8 +275,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAAF1F141C6F25B200260A53 /* SwitchCellModel.swift in Sources */,
 				AAD7DE191C6F02E000D15B72 /* CustomTableViewCell.swift in Sources */,
+				AAAF1F111C6F236900260A53 /* CTVCell.swift in Sources */,
 				AAD7DE1B1C6F050C00D15B72 /* CustomTableModel.swift in Sources */,
+				AAAF1F0C1C6F22C500260A53 /* CustomViewController.swift in Sources */,
 				AAD7DDED1C6DDD8E00D15B72 /* ViewController.swift in Sources */,
 				AAD7DDEB1C6DDD8E00D15B72 /* AppDelegate.swift in Sources */,
 			);
@@ -490,6 +506,7 @@
 				AAD7DE111C6DDD8E00D15B72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AAD7DE121C6DDD8E00D15B72 /* Build configuration list for PBXNativeTarget "TableViewExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +515,7 @@
 				AAD7DE141C6DDD8E00D15B72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AAD7DE151C6DDD8E00D15B72 /* Build configuration list for PBXNativeTarget "TableViewExampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +524,7 @@
 				AAD7DE171C6DDD8E00D15B72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
