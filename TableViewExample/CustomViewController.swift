@@ -2,9 +2,6 @@
 //  CustomViewController.swift
 //  TableViewExample
 //
-//  Created by 谷田　裕樹 on 2016/02/13.
-//  Copyright © 2016年 谷田　裕樹. All rights reserved.
-//
 
 import UIKit
 
@@ -24,8 +21,8 @@ class CustomViewController: UIViewController, UITableViewDataSource, UITableView
         tableView.dataSource = self
         
         //カスタムセルを指定
-        let nib  = UINib(nibName: "CustomTableViewCell", bundle:nil)
-        tableView.registerNib(nib, forCellReuseIdentifier:"Cell")
+        let nib = UINib(nibName: "CTVCell", bundle:nil)
+        tableView.registerNib(nib, forCellReuseIdentifier:"CTVCell")
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,7 +44,7 @@ class CustomViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         //cell deque
-        let cell: CTVCell = self.tableView.dequeueReusableCellWithIdentifier("Cell") as! CTVCell
+        let cell: CTVCell = self.tableView.dequeueReusableCellWithIdentifier("CTVCell") as! CTVCell
         cell.configureCell(productList[indexPath.row], atIndexpath: indexPath)
         
         return cell
