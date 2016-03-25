@@ -22,7 +22,7 @@ class CustomViewController: UIViewController, UITableViewDataSource, UITableView
         
         //カスタムセルを指定
         let nib = UINib(nibName: "CTVCell", bundle:nil)
-        tableView.registerNib(nib, forCellReuseIdentifier:"CTVCell")
+        tableView.registerNib(nib, forCellReuseIdentifier:"Cell")
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,7 +44,7 @@ class CustomViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         //cell deque
-        let cell: CTVCell = self.tableView.dequeueReusableCellWithIdentifier("CTVCell") as! CTVCell
+        let cell: CTVCell = self.tableView.dequeueReusableCellWithIdentifier("Cell") as! CTVCell
         cell.configureCell(productList[indexPath.row], atIndexpath: indexPath)
         
         return cell
